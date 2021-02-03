@@ -1,14 +1,16 @@
 
 #include <iostream>
 #include <string>
+#include "Queue.h"
 using namespace std;
 
 int main()
 {
-    std::cout << "Hello World!\n";
-    string s;
-    s.length();
-    char d = 'A';
-    cout << tolower(d);
+    Queue q(100);
+    q.enqueue(1);
+    q.enqueue(2);
+    q.dequeue();
+    q.dequeue();
+    q.dequeue();
 }
 

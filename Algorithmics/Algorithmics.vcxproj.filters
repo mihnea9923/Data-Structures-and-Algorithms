@@ -15,45 +15,15 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\Desktop\algorithmics\main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\Desktop\algorithmics\hashtable.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Queue.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="stack.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="heap.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="mergeSort.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="graph.cpp">
+    <ClCompile Include="Algorithmics.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\..\Desktop\algorithmics\hashtable.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
     <ClInclude Include="Queue.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="stack.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="heap.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="mergeSort.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="graph.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

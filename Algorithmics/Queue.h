@@ -17,8 +17,7 @@ public:
 	bool isEmpty();
 	void enqueue(int value);
 	void dequeue();
-	int showFront();
-	void displayQueue();
+	int getFront();
 };
 
 

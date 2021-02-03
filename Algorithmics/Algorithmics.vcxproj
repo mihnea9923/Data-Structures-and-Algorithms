@@ -140,21 +140,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\Desktop\algorithmics\hashtable.cpp" />
-    <ClCompile Include="..\..\..\..\Desktop\algorithmics\main.cpp" />
-    <ClCompile Include="graph.cpp" />
-    <ClCompile Include="heap.cpp" />
-    <ClCompile Include="mergeSort.cpp" />
+    <ClCompile Include="Algorithmics.cpp" />
     <ClCompile Include="Queue.cpp" />
-    <ClCompile Include="stack.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\..\Desktop\algorithmics\hashtable.h" />
-    <ClInclude Include="graph.h" />
-    <ClInclude Include="heap.h" />
-    <ClInclude Include="mergeSort.h" />
     <ClInclude Include="Queue.h" />
-    <ClInclude Include="stack.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
