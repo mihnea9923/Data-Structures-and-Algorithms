@@ -28,6 +28,13 @@ public:
 	void add(int value);
 	void remove(int value);
 	void printList();
+	bool isCircular();
+	void reverse(LinkedListNode* current , LinkedListNode* prev);
+	LinkedListNode* getHead() { return head; }
+	int getLength();
+	//it deletes the entire list
+	void clear();
+	void clearUtility(LinkedListNode* current, LinkedListNode* prev);
 private:
 	LinkedListNode* head;
 	LinkedListNode* tail;
