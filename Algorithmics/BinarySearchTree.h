@@ -25,6 +25,7 @@ private:
 	void postorderUtil(Node* it);
 	void inorderUtil(Node* it);
 	void addUtil(Node* it, Node* node);
-	void removeUtil(Node* it, int value);
+	Node* removeUtil(Node* it, int value);
+	Node* findMinimum(Node* it);
 };
 

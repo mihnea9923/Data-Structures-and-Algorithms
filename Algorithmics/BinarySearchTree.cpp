@@ -94,7 +94,43 @@ void BinarySearchTree::remove(int value)
 	removeUtil(it, value);
 }
 
-void BinarySearchTree::removeUtil(Node* it, int value)
+Node* BinarySearchTree::findMinimum(Node* it)
 {
+	Node* current = it;
+	while (current && current->left)
+		current = current->left;
+	return current;
+}
 
+Node* BinarySearchTree::removeUtil(Node* it, int value)
+{
+	if (it == NULL)
+		return NULL;
+	if (it->value < value)
+	{
+		it->right = removeUtil(it->right, value);
+	}
+	else if (it->value > value)
+	{
+		it->left = removeUtil(it->left, value);
+	}
+	else {
+		if (it->left == NULL)
+		{
+			Node* temp = it->right;
+			delete(it);
+			return temp;
+		}
+		if (it->right == NULL)
+		{
+			Node* temp = it->left;
+			delete(it);
+			return temp;
+		}
+		Node* minRight = findMinimum(it->right);
+		it->value = minRight->value;
+		it->right = removeUtil(it->right, it->value);
+			
+	}
+	return it;
 }
