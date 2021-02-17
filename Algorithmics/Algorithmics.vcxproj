@@ -141,12 +141,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Algorithmics.cpp" />
+    <ClCompile Include="AVLTree.cpp" />
     <ClCompile Include="BinarySearchTree.cpp" />
     <ClCompile Include="LinkedList.cpp" />
     <ClCompile Include="Queue.cpp" />
     <ClCompile Include="Stack.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AVLTree.h" />
     <ClInclude Include="BinarySearchTree.h" />
     <ClInclude Include="Libs.h" />
     <ClInclude Include="LinkedList.h" />
