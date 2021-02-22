@@ -76,14 +76,50 @@ Node* AVLTree::LLRotation(Node* node)
 
 Node* AVLTree::LRRotation(Node* node)
 {
-	return nullptr;
+	Node* left = node->left;
+	Node* leftRight = left->right;
+
+	left->right = leftRight->left;
+	node->left = leftRight->right;
+	leftRight->left = left;
+	leftRight->right = node;
+	
+	left->height = nodeHeight(left);
+	leftRight->height = nodeHeight(leftRight);
+	node->height = nodeHeight(node);
+	if (head == node)
+		head = leftRight;
+	return leftRight;
 }
 
 Node* AVLTree::RLRotation(Node* node)
 {
-	return NULL;
+	Node* right = node->right;
+	Node* rightLeft = right->left;
+	node->right = rightLeft->left;
+	right->left = rightLeft->right;
+	rightLeft->left = node;
+	rightLeft->right = right;
+
+	right->height = nodeHeight(right);
+	rightLeft->height = nodeHeight(rightLeft);
+	node->height = nodeHeight(node);
+
+	if (node == head)
+		head = rightLeft;
+	return rightLeft;
 }
 Node* AVLTree::RRRotation(Node* node)
 {
-	return NULL;
+	Node* right = node->right;
+	Node* rightLeft = right->left;
+	right->left = node;
+	node->right = rightLeft;
+
+	node->height = nodeHeight(node);
+	right->height = nodeHeight(right);
+
+	if (head == node)
+		head = right;
+	return right;
 }

@@ -14,9 +14,11 @@ int main()
 {
 	AVLTree tree;
 	tree.add(10);
-	tree.add(5);
-	tree.add(3);
-	cout << tree.getHead()->value;
+	tree.add(14);
+	tree.add(12);
+	tree.add(11);
+	tree.add(13);
+	cout << tree.getHead()->left->right->value;
 	return 0;
 }
 
