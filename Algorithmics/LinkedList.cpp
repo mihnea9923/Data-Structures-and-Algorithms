@@ -25,6 +25,10 @@ void LinkedList::remove(int value)
 	{
 		if (iterator->next->value == value)
 		{
+			if (iterator->next == tail)
+			{
+				tail = iterator;
+			}
 			LinkedListNode* temp = iterator->next;
 			iterator->next = iterator->next->next;
 			delete(temp);
@@ -65,6 +69,8 @@ void LinkedList::reverse(LinkedListNode* current , LinkedListNode* prev)
 	}
 	reverse(current->next, current);
 	current->next = prev;
+	if (prev == NULL)
+		tail = current;
 }
 
 int LinkedList::getLength()
@@ -86,6 +92,8 @@ void LinkedList::clear()
 		head = NULL;
 	}
 	clearUtility(head, NULL);
+	head = NULL;
+	tail = NULL;
 }
 
 void LinkedList::clearUtility(LinkedListNode* current, LinkedListNode* prev)
@@ -93,16 +101,8 @@ void LinkedList::clearUtility(LinkedListNode* current, LinkedListNode* prev)
 	if (current == NULL)
 		return;
 	clearUtility(current->next, current);
-	if (current->next == NULL)
-	{
-		if (prev != NULL)
-		{
-			prev->next = NULL;
-			head = NULL;
-		}
-		delete(current);
-		return;
-	}
-
+	if(prev)
+		prev->next = NULL;
+	delete(current);
 }
 

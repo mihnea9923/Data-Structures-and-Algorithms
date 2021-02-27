@@ -31,12 +31,13 @@ public:
 	bool isCircular();
 	void reverse(LinkedListNode* current , LinkedListNode* prev);
 	LinkedListNode* getHead() { return head; }
+	LinkedListNode* getTail() { return tail; }
 	int getLength();
 	//it deletes the entire list
 	void clear();
-	void clearUtility(LinkedListNode* current, LinkedListNode* prev);
 private:
 	LinkedListNode* head;
 	LinkedListNode* tail;
+	void clearUtility(LinkedListNode* current, LinkedListNode* prev);
 };
 
