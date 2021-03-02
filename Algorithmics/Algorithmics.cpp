@@ -6,21 +6,22 @@
 #include <numeric>
 #include <queue>
 #include <unordered_map>
-#include "LinkedList.h"
+#include "MaxHeap.h"
 using namespace std;
 
 
 int main()
 {
+	MaxHeap heap;
+	heap.insert(4);
+	heap.insert(3);
+	heap.insert(20);
+	heap.insert(25);
+	heap.insert(7);
+	heap.extractMax();
+	heap.extractMax();
+	cout << heap.top();
 	
-	LinkedList l;
-	l.add(1);
-	l.add(2);
-	l.add(3);
-	l.add(4);
-	l.add(5);
-	l.clear();
-	cout << l.getLength();
 	return 0;
 }
 
