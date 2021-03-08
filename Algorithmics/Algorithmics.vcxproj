@@ -145,6 +145,7 @@
     <ClCompile Include="Algorithmics.cpp" />
     <ClCompile Include="AVLTree.cpp" />
     <ClCompile Include="BinarySearchTree.cpp" />
+    <ClCompile Include="HashTable.cpp" />
     <ClCompile Include="LinkedList.cpp" />
     <ClCompile Include="MaxHeap.cpp" />
     <ClCompile Include="Queue.cpp" />
@@ -154,6 +155,7 @@
   <ItemGroup>
     <ClInclude Include="AVLTree.h" />
     <ClInclude Include="BinarySearchTree.h" />
+    <ClInclude Include="HashTable.h" />
     <ClInclude Include="Libs.h" />
     <ClInclude Include="LinkedList.h" />
     <ClInclude Include="MaxHeap.h" />
