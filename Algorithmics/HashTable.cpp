@@ -43,7 +43,7 @@ int HashTable::search(int key)
 
 void HashTable::removeItem(int key)
 {
-	int hash = hashFunction(key);
+	int hash =	hashFunction(key);
 	for (auto it = table[hash].begin(); it != table[hash].end(); it++)
 	{
 		if (it->first == key)
