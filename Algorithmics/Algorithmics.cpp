@@ -2,32 +2,32 @@
 #include <string>
 #include <vector>
 #include <algorithm>
+#include<string.h>
 #include <unordered_set>
 #include <numeric>
 #include <queue>
 #include <unordered_map>
-#include "Sorting.h"
+#include "Graph.h"
 using namespace std;
-struct TreeNode {
-	int val;
-	TreeNode* left;
-	TreeNode* right;
-	TreeNode() : val(0), left(nullptr), right(nullptr) {}
-	TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
-	TreeNode(int x, TreeNode* left, TreeNode* right) : val(x), left(left), right(right) {}
-};
 
 int main()
 {
-	TreeNode* root = new TreeNode(3);
-	root->right = new TreeNode(2);
-	root->right->right = new TreeNode(4);
-	root->right->left = new TreeNode(1);
-	Sorting s;
-	vector<int> v = { 1 , 4 , 3 , 2 , 6 , 1 , 6 , 3};
-	s.quickSort(v , 0 , v.size() - 1);
-	for (auto x : v)
-		cout << x << endl;
+	Graph g(9);
+	g.addEdge(0, 1, 4);
+	g.addEdge(0, 7, 8);
+	g.addEdge(1, 7, 11);
+	g.addEdge(1, 2, 8);
+	g.addEdge(2, 8, 2);
+	g.addEdge(2, 5, 4);
+	g.addEdge(2, 3, 7);
+	g.addEdge(3, 4, 9);
+	g.addEdge(3, 5, 14);
+	g.addEdge(4, 5, 10);
+	g.addEdge(5, 6, 2);
+	g.addEdge(6, 8, 6);
+	g.addEdge(6, 7, 1);
+	g.addEdge(7, 8, 7);
+	g.bfs(0);
 	return 0;
 }
 
